@@ -1,12 +1,11 @@
 fn encrypt(text: &str, shift: i16) -> String {
-    let code_a = 'A' as i16;
-    let code_z = 'Z' as i16;
+	let code_a = 'A' as i16;
+	let is_az = |c| 'A' <= c && c <= 'Z';
+	let conv = |c| (((c-code_a+shift+26)%26+code_a) as u8) as char;
+	let enc1 = |c| if is_az(c) { conv(c as i16) } else { c };
     let mut result = String::new();
     for ch in text.chars() {
-        let mut code = ch as i16;
-        // not compiled
-        code = |code| ((code - code_a + shift + 26) % 26 + code_a) if {code_a <= code && code <= code_z} else {code};
-        result.push((code as u8) as char);
+        result.push(enc1(ch));
     }
     return result;
 }
