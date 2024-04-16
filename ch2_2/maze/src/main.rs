@@ -22,6 +22,14 @@ fn main() {
             }
             maze[y][x] = 1;
             let r:i32 = rng.gen_range(0..=3);
+
+            match r {
+                0 => maze[y-1][x] = 1,
+                1 => maze[y+1][x] = 1,
+                2 => maze[y][x-1] = 1,
+                _ => maze[y][x+1] = 1
+            }
+            /*
             if r == 0 {
                 maze[y-1][x] = 1
             }
@@ -33,7 +41,7 @@ fn main() {
             }
             else if r == 3 {
                 maze[y][x+1] = 1
-            }
+            }*/
         }
     }
 
