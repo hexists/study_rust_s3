@@ -12,8 +12,7 @@ fn main() {
 	// '🐭🐻' 부분 얻기
 	let mut sub2 = String::new();
 	for (i, c) in pr.chars().enumerate() {
-		if 3 <= i && i <= 4 { sub2.push(c); }
-		break;
+		if 2 <= i && i <= 3 { sub2.push(c); }
 	}
-	println!("4-5번째 문자: {}", sub1);
+	println!("4-5번째 문자: {}", sub2);
 }
