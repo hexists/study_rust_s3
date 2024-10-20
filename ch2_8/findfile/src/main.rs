@@ -20,6 +20,7 @@ fn findfile(target: &path::PathBuf, keyword: &str) {
 	// 파일 목록을 취득
 	let files = target.read_dir().expect("존재하지 않는 경로");
 	for dir_entry in files {
+		// println!("{:?}", dir_entry);
 		// PathBuf로 경로 취득
 		let path = dir_entry.unwrap().path();
 		// 디렉터리라면 자신을 다시 호출해 파일을 검색

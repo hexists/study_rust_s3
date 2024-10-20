@@ -29,7 +29,7 @@ fn tree(target: &path::PathBuf, level: isize) {
 		let fname = path.file_name().unwrap().to_string_lossy();
 		// 디렉터리라면 재귀적으로 표시
 		if path.is_dir() {
-			print!("|-- <{}>", fname);
+			println!("|-- <{}>", fname);
 			tree(&path, level+1);
 			continue;
 		}
