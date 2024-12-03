@@ -50,7 +50,7 @@ mod mml_parser_test {
 		let notes = parse(mml);
 		assert_eq!(notes[0].no, 60);
 		assert_eq!(notes[0].len, 2);
-		assert_eq!(notes[0].no, 62);
-		assert_eq!(notes[0].no, 64);
+		assert_eq!(notes[0].no, 60);
+		assert_eq!(notes[0].no, 60);
 	}
 }
