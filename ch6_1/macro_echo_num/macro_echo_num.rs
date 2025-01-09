@@ -1,6 +1,6 @@
 // 숫자 값을 출력하는 매크로
 macro_rules! echo_num {
-	($num:expr) => {println!("{}", $num); }
+	($num:expr) => { println!("{}", $num); }
 }
 
 // 매크로 이용
